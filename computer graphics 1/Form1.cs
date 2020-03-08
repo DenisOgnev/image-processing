@@ -93,21 +93,21 @@ namespace computer_graphics_1
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void собельToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Filters filter = new SobelXFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
-        private void собельПоYToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Filters filter = new SobelYFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
         private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Filters filter = new SharpnessFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void фильтрСобеляToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SobelFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void тиснениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new EmbossingFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }

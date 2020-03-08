@@ -18,3 +18,13 @@ C:\Users\ognev.d\Desktop\image-processing\computer graphics 1\obj\Debug\computer
 C:\Users\ognev.d\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csproj.CoreCompileInputs.cache
 C:\Users\ognev.d\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.exe
 C:\Users\ognev.d\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.pdb
+C:\Users\denis\Desktop\image-processing\computer graphics 1\bin\Debug\computer graphics 1.exe.config
+C:\Users\denis\Desktop\image-processing\computer graphics 1\bin\Debug\computer graphics 1.exe
+C:\Users\denis\Desktop\image-processing\computer graphics 1\bin\Debug\computer graphics 1.pdb
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csprojAssemblyReference.cache
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer_graphics_1.Form1.resources
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer_graphics_1.Properties.Resources.resources
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csproj.GenerateResource.cache
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.exe
+C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.pdb
