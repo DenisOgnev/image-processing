@@ -13,6 +13,7 @@ namespace computer_graphics_1
     public partial class Form1 : Form
     {
         Bitmap image;
+        Stack<Bitmap> images = new Stack<Bitmap>();
         public Form1()
         {
             InitializeComponent();
@@ -30,15 +31,33 @@ namespace computer_graphics_1
             }
         }
 
-        private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InvertFilter filter = new InvertFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
+            if (pictureBox1.Image != null)
+            {
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.Filter = "Png Image | *.png | JPeg Image | *.jpg | Bitmap Image | *.bmp";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    switch (dialog.FilterIndex)
+                    {
+                        case 1:
+                            image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                            break;
+                        case 2:
+                            image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            break;
+                        case 3:
+                            image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                            break;
+                    }
+                }
+            }
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            Bitmap newImage = ((Filters)e.Argument).processImage(image, backgroundWorker1);
+            Bitmap newImage = ((Filters)e.Argument).processImage(image, backgroundWorker1, images);
             if (backgroundWorker1.CancellationPending != true)
                 image = newImage;
         }
@@ -61,6 +80,12 @@ namespace computer_graphics_1
         private void button1_Click(object sender, EventArgs e)
         {
             backgroundWorker1.CancelAsync();
+        }
+
+        private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InvertFilter filter = new InvertFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void размытиеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,6 +188,28 @@ namespace computer_graphics_1
         {
             Filters filter = new SharpnessFilter1();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void операторЩарраToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SharrFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void операторПриюттаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new PriyuttFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(images.Count != 0)
+            {
+                Bitmap oldImage = images.Pop();
+                pictureBox1.Image = oldImage;
+                pictureBox1.Refresh();
+            }
         }
     }
 }

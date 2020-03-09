@@ -13,13 +13,14 @@ namespace computer_graphics_1
     {
         protected abstract Color calculateNewPixelColor(Bitmap sourceImage, int x, int y);
 
-        public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
+        public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker, Stack<Bitmap> bitmaps)
         {
             if(sourceImage == null)
             {
                 MessageBox.Show("Откройте изображение");
                 return null;
             }
+            bitmaps.Push(sourceImage);
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
             for (int i = 0; i < sourceImage.Width; i++)
             {
@@ -31,6 +32,9 @@ namespace computer_graphics_1
                     resultImage.SetPixel(i, j, calculateNewPixelColor(sourceImage, i, j));
                 }
             }
+            
+            
+
             return resultImage;
         }
 

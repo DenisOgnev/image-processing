@@ -52,9 +52,11 @@
     <Compile Include="Classes\Filters.cs" />
     <Compile Include="Classes\GlassFilter.cs" />
     <Compile Include="Classes\MotionBlurFilter.cs" />
+    <Compile Include="Classes\PriyuttFilter.cs" />
     <Compile Include="Classes\RotationFilter.cs" />
     <Compile Include="Classes\SepiaFilter.cs" />
     <Compile Include="Classes\SharpnessFilter1.cs" />
+    <Compile Include="Classes\SharrFilter.cs" />
     <Compile Include="Classes\ShiftDownFilter.cs" />
     <Compile Include="Classes\ShiftLeftFilter.cs" />
     <Compile Include="Classes\ShiftRightFilter.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\отмена.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
