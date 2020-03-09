@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace computer_graphics_1
 {
@@ -14,6 +15,11 @@ namespace computer_graphics_1
 
         public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
+            if(sourceImage == null)
+            {
+                MessageBox.Show("Откройте изображение");
+                return null;
+            }
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
             for (int i = 0; i < sourceImage.Width; i++)
             {

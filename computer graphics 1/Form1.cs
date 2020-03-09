@@ -110,5 +110,59 @@ namespace computer_graphics_1
             Filters filter = new EmbossingFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void влевоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ShiftLeftFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void вправоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ShiftRightFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void внизToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ShiftDownFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void вверхToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ShiftUpFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void поворотToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new RotationFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void волнаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new WaveFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void эффектСтеклаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GlassFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void motionBlurToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Filters filter = new MotionBlurFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void резкостьвариант2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SharpnessFilter1();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

@@ -50,8 +50,17 @@
     <Compile Include="Classes\BlurFilter.cs" />
     <Compile Include="Classes\EmbossingFilter.cs" />
     <Compile Include="Classes\Filters.cs" />
+    <Compile Include="Classes\GlassFilter.cs" />
+    <Compile Include="Classes\MotionBlurFilter.cs" />
+    <Compile Include="Classes\RotationFilter.cs" />
     <Compile Include="Classes\SepiaFilter.cs" />
+    <Compile Include="Classes\SharpnessFilter1.cs" />
+    <Compile Include="Classes\ShiftDownFilter.cs" />
+    <Compile Include="Classes\ShiftLeftFilter.cs" />
+    <Compile Include="Classes\ShiftRightFilter.cs" />
+    <Compile Include="Classes\ShiftUpFilter.cs" />
     <Compile Include="Classes\SobelFilter.cs" />
+    <Compile Include="Classes\WaveFilter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

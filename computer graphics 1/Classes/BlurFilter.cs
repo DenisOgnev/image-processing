@@ -10,8 +10,8 @@ namespace computer_graphics_1
     {
         public BlurFilter()
         {
-            int sizeX = 3;
-            int sizeY = 3;
+            int sizeX = 9;
+            int sizeY = 9;
             kernel = new float[sizeX, sizeY];
             for (int i = 0; i < sizeX; i++)
                 for (int j = 0; j < sizeY; j++)
