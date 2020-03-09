@@ -207,6 +207,7 @@ namespace computer_graphics_1
             if(images.Count != 0)
             {
                 Bitmap oldImage = images.Pop();
+                image = oldImage;
                 pictureBox1.Image = oldImage;
                 pictureBox1.Refresh();
             }
