@@ -13,7 +13,7 @@ namespace computer_graphics_1
     {
         protected abstract Color calculateNewPixelColor(Bitmap sourceImage, int x, int y);
 
-        public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker, Stack<Bitmap> bitmaps)
+        public virtual Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker, Stack<Bitmap> bitmaps)
         {
             if(sourceImage == null)
             {
@@ -32,9 +32,6 @@ namespace computer_graphics_1
                     resultImage.SetPixel(i, j, calculateNewPixelColor(sourceImage, i, j));
                 }
             }
-            
-            
-
             return resultImage;
         }
 

@@ -51,12 +51,13 @@
     <Compile Include="Classes\EmbossingFilter.cs" />
     <Compile Include="Classes\Filters.cs" />
     <Compile Include="Classes\GlassFilter.cs" />
+    <Compile Include="Classes\GrayWorldFilter.cs" />
     <Compile Include="Classes\MotionBlurFilter.cs" />
-    <Compile Include="Classes\PriyuttFilter.cs" />
+    <Compile Include="Classes\PrewittFilter.cs" />
     <Compile Include="Classes\RotationFilter.cs" />
     <Compile Include="Classes\SepiaFilter.cs" />
     <Compile Include="Classes\SharpnessFilter1.cs" />
-    <Compile Include="Classes\SharrFilter.cs" />
+    <Compile Include="Classes\ScharrFilter.cs" />
     <Compile Include="Classes\ShiftDownFilter.cs" />
     <Compile Include="Classes\ShiftLeftFilter.cs" />
     <Compile Include="Classes\ShiftRightFilter.cs" />

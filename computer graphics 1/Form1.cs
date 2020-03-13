@@ -192,13 +192,13 @@ namespace computer_graphics_1
 
         private void операторЩарраToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filters filter = new SharrFilter();
+            Filters filter = new ScharrFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void операторПриюттаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filters filter = new PriyuttFilter();
+            Filters filter = new PrewittFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -211,6 +211,12 @@ namespace computer_graphics_1
                 pictureBox1.Image = oldImage;
                 pictureBox1.Refresh();
             }
+        }
+
+        private void серыйМирToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GrayWorldFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }

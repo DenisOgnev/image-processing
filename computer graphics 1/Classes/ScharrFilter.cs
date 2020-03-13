@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace computer_graphics_1
 {
-    class PriyuttFilter : MatrixFilter
+    class ScharrFilter : MatrixFilter
     {
         protected float[,] kernelY = null;
-        public PriyuttFilter()
+        public ScharrFilter()
         {
-            kernel = new float[3, 3] { { -1, 0, 1 }, { -1, 0, -1 }, { -1, 0, 1 } };
-            kernelY = new float[3, 3] { { -1, -1, -1 }, { 0, 0, 0 }, { 1, 1, 1 } };
+            kernel = new float[3, 3] { { 3, 0, -3 }, { 10, 0, -10 }, { 3, 0, -3 } };
+            kernelY = new float[3, 3] { { 3, 10, 3 }, { 0, 0, 0 }, { -3, -10, -3 } };
         }
 
         protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
@@ -33,6 +33,9 @@ namespace computer_graphics_1
                     resultG += neighborColor.G * kernel[k + radiusX, l + radiusY] + neighborColor.G * kernelY[k + radiusX, l + radiusY];
                     resultB += neighborColor.B * kernel[k + radiusX, l + radiusY] + neighborColor.B * kernelY[k + radiusX, l + radiusY];
                 }
+            resultR = Math.Abs(resultR);
+            resultG = Math.Abs(resultG);
+            resultB = Math.Abs(resultB);
             return Color.FromArgb(
                 Clamp((int)resultR, 0, 255),
                 Clamp((int)resultG, 0, 255),
