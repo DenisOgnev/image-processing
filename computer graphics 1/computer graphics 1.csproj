@@ -52,6 +52,7 @@
     <Compile Include="Classes\Filters.cs" />
     <Compile Include="Classes\GlassFilter.cs" />
     <Compile Include="Classes\GrayWorldFilter.cs" />
+    <Compile Include="Classes\LinerTension.cs" />
     <Compile Include="Classes\MotionBlurFilter.cs" />
     <Compile Include="Classes\PrewittFilter.cs" />
     <Compile Include="Classes\RotationFilter.cs" />
