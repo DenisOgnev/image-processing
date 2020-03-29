@@ -28,3 +28,14 @@ C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer g
 C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csproj.CoreCompileInputs.cache
 C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.exe
 C:\Users\denis\Desktop\image-processing\computer graphics 1\obj\Debug\computer graphics 1.pdb
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\bin\Debug\computer graphics 1.exe.config
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\bin\Debug\computer graphics 1.exe
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\bin\Debug\computer graphics 1.pdb
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csprojAssemblyReference.cache
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer_graphics_1.Form1.resources
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer_graphics_1.Properties.Resources.resources
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csproj.GenerateResource.cache
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer graphics 1.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer graphics 1.exe
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer graphics 1.pdb
+C:\Users\denis\Desktop\учеба\графика\image-processing\computer graphics 1\obj\Debug\computer_graphics_1.KernelSetForm.resources

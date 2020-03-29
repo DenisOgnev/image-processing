@@ -14,6 +14,7 @@ namespace computer_graphics_1
     {
         Bitmap image;
         Stack<Bitmap> images = new Stack<Bitmap>();
+        int[,] mathKernel = new int[3, 3];
         public Form1()
         {
             InitializeComponent();
@@ -60,6 +61,7 @@ namespace computer_graphics_1
             Bitmap newImage = ((Filters)e.Argument).processImage(image, backgroundWorker1, images);
             if (backgroundWorker1.CancellationPending != true)
                 image = newImage;
+
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -217,6 +219,55 @@ namespace computer_graphics_1
         {
             Filters filter = new GrayWorldFilter();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void идеальныйОтражательToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new PerfectReflector();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void линейноеРасстяжениеГистограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new LinearCorrection();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void медианныйФильтрToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new MedianFilter(3);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void расширениеToolStripMenuItem_ClickAsync(object sender, EventArgs e)
+        {
+            Filters filter = new DilationFilter(mathKernel);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void сужениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ErosionFilter(mathKernel);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void открытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new OpeningFilter(mathKernel);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void закрытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ClosingFilter(mathKernel);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void задатьСтруктурныйЭлементДляОперацийМатМорфологииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KernelSetForm form = new KernelSetForm();
+            form.Show();
+            mathKernel = form.setKernel();
         }
     }
 }
