@@ -54,6 +54,7 @@
     <Compile Include="Classes\ErosionFilter.cs" />
     <Compile Include="Classes\Filters.cs" />
     <Compile Include="Classes\GlassFilter.cs" />
+    <Compile Include="Classes\GradFilter.cs" />
     <Compile Include="Classes\GrayWorldFilter.cs" />
     <Compile Include="Classes\LinearCorrection.cs" />
     <Compile Include="Classes\MathMorphologyFilter.cs" />

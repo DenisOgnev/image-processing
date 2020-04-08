@@ -13,7 +13,7 @@ namespace computer_graphics_1
     {
         public ClosingFilter()
         {
-            kernel = new int[3, 3] { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
+            kernel = new int[3, 3] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } };
             radius = kernel.GetLength(0) / 2;
         }
 

@@ -269,5 +269,11 @@ namespace computer_graphics_1
             form.Show();
             mathKernel = form.setKernel();
         }
+
+        private void gradToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GradFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
